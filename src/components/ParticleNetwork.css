@@ -1,0 +1,40 @@
+.particle-network {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(102, 126, 234, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.particle-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: crosshair;
+  transition: filter 0.3s ease;
+}
+
+.particle-canvas:hover {
+  filter: brightness(1.1) saturate(1.2);
+}
+
+@media (max-width: 768px) {
+  .particle-network {
+    min-height: 300px;
+    border-radius: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .particle-network {
+    min-height: 250px;
+    border-radius: 10px;
+  }
+} 
